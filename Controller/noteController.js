@@ -123,7 +123,7 @@ exports.recoverTrash = async (req, res) => {
                 await newTodo.save();
                 const result=await trashs.findOneAndDelete({_id:Tid})
                 res.status(200).json({newTodo,result});
-                console.log("Todo Added");
+                console.log("Todo recovered!");
             }
         }
     } catch (err) {
